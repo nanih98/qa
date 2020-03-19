@@ -1,0 +1,11 @@
+version: '3.5'
+services: 
+  qa-testing: 
+    deploy: 
+      restart_policy: 
+        condition: none
+    image: node:buster-slim 
+    container_name: qa
+    #command: npm test
+    #volumes: 
+    #   - /Users/anonymous/Desktop/qa/source:/var/www/html
