@@ -9,8 +9,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  // Example of a dependencie that i will need (webdriver cli to connect with selenium server with chromedriver, firefox driver..etc)
   "devDependencies": {
-    "@wdio/cli": "^5.18.7", 
+    "@wdio/cli": "^5.18.7" 
   }
 }
