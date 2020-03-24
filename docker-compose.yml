@@ -1,0 +1,17 @@
+version: "3.5"
+services:
+  selenium-chrome:
+    image: selenium/standalone-chrome:3.141.59-zirconium
+    container_name: selenium-chrome
+    network_mode: host 
+    volumes:
+      - /dev/shm:/dev/shm
+  nodejs:
+    image: nanih98/qa:debian
+    container_name: node 
+    network_mode: host
+    #command: npm install 
+    depends_on:
+      - selenium-chrome
+    volumes:
+      - /home/anonymous/Documentos/qa/source:/home/node
