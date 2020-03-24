@@ -99,10 +99,10 @@ RUN set -ex \
 
 
 #Setup our personal custom configurations
-#Install base dependencies of the system (container node based on debian kernel)
+#Install base dependencies of the system (container node based on debian kernel). Instalamos algunos paquetes necesarios para testeo (telnet,ping,vim para editar...).
 RUN set -eux ;\
     apt-get update ;\
-    apt install wget libnspr4 libsqlite3-0 libxcb1 libx11-data build-essential python python3 -y ;\
+    apt install wget libnspr4 libsqlite3-0 libxcb1 libx11-data build-essential python python3 vim telnet iputils-ping -y ;\
     cd /tmp ;\
     wget http://ftp.fr.debian.org/debian/pool/main/g/glib2.0/libglib2.0-0_2.58.3-2+deb10u2_amd64.deb && dpkg -i libglib2.0-0_2.58.3-2+deb10u2_amd64.deb ;\
     wget http://ftp.fr.debian.org/debian/pool/main/n/nss/libnss3_3.42.1-1+deb10u2_amd64.deb && dpkg -i libnss3_3.42.1-1+deb10u2_amd64.deb ;\
